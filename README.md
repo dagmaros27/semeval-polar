@@ -21,13 +21,24 @@ Our system achieved the following average F1-scores on the official leaderboard:
 ---
 
 ## 🚀 Methodology
+## Methodology
 
-Our pipeline follows a unified fine-tuning framework:
+1. **Exploratory Data Analysis (EDA)**
+   Conducted an initial analysis to understand label distributions, identifying significant class imbalance that informed our loss function strategy.
 
-1. **Exploratory Data Analysis (EDA):** Deep dive into the multilingual dataset to identify class imbalances and linguistic patterns.
-2. **Instruction Augmentation:** Enhancing model inputs with specific instructions to improve context awareness.
-3. **Weighted Loss Functions:** Implementing custom loss strategies to mitigate the effects of imbalanced data across the 22 available languages.
-4. **Model Comparison:** Evaluating `Afro-XLMR` vs. `Twitter-RoBERTa` for multilingual polarization tasks.
+2. **Pipeline Construction**
+   Developed a preprocessing pipeline that cleans text and applies **Instruction Augmentation**, prepending task-specific prompts to every input to guide the model's focus.
+
+3. **Model Experimentation**
+   Benchmarked various pre-trained Transformer encoders (including DeBERTa and Afro-XLMR) to identify the most effective backbones for English and African languages.
+
+4. **Final Architecture & Optimization**
+   Selected the top-performing models and fine-tuned them using a custom classification head with **Weighted Cross-Entropy Loss** to handle class imbalance effectively.
+
+5. **Competitive Performance**
+   The final instruction-tuned models achieved competitive results on the competition leaderboard.
+
+> **Note:** A full breakdown of the methodology, ablation studies, and detailed performance benchmarks for all tested encoders can be found in the [Links](#🔗-links) linked at the end of this document.
 
 ---
 
