@@ -38,7 +38,7 @@ Our system achieved the following average F1-scores on the official leaderboard:
 5. **Competitive Performance**
    The final instruction-tuned models achieved competitive results on the competition leaderboard.
 
-> **Note:** A full breakdown of the methodology, ablation studies, and detailed performance benchmarks for all tested encoders can be found in the [Links](#🔗-links) linked at the end of this document.
+> **Note:** A full breakdown of the methodology, ablation studies, and detailed performance benchmarks for all tested encoders can be found in the [Links](#-links) linked at the end of this document.
 
 ---
 
